@@ -11,11 +11,6 @@ module.exports = {
       },
     },
   },
-
-  zkSyncDeploy: {
-    zkSyncNetwork: "https://zksync2-testnet.zksync.dev",
-    ethNetwork: "goerli",
-  },
   networks: {
     zksync_testnet: {
       url: "https://zksync2-testnet.zksync.dev",
