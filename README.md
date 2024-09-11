@@ -32,6 +32,14 @@ npm run deploy
 yarn deploy
 ```
 
+> [!IMPORTANT]
+> This requires a secret key to make it work. Get your secret key [here](https://thirdweb.com/dashboard/settings/api-keys).
+> Pass your secret key as a value after `-k` flag.
+> ```bash
+> npm run deploy -- -k <your-secret-key>
+> # or
+> yarn deploy -k <your-secret-key>
+
 ## Releasing Contracts
 
 If you want to release a version of your contracts publicly, you can use one of the followings command:
