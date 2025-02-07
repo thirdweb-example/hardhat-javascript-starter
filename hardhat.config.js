@@ -1,9 +1,11 @@
 require("@matterlabs/hardhat-zksync-solc");
+require("@matterlabs/hardhat-zksync-verify");
+
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   zksolc: {
-    version: "1.3.9",
+    version: "1.4.1",
     compilerSource: "binary",
     settings: {
       optimizer: {
@@ -12,17 +14,21 @@ module.exports = {
     },
   },
   networks: {
-    zksync_testnet: {
-      url: "https://zksync2-testnet.zksync.dev",
-      ethNetwork: "goerli",
-      chainId: 280,
+    zkSyncSepoliaTestnet: {
+      url: "https://sepolia.era.zksync.dev",
+      ethNetwork: "sepolia",
       zksync: true,
+      chainId: 300,
+      verifyURL:
+        "https://explorer.sepolia.era.zksync.dev/contract_verification",
     },
-    zksync_mainnet: {
-      url: "https://zksync2-mainnet.zksync.io/",
+    zkSyncMainnet: {
+      url: "https://mainnet.era.zksync.io",
       ethNetwork: "mainnet",
-      chainId: 324,
       zksync: true,
+      chainId: 324,
+      verifyURL:
+        "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
     },
   },
   paths: {
@@ -32,7 +38,7 @@ module.exports = {
     tests: "./test",
   },
   solidity: {
-    version: "0.8.17",
+    version: "0.8.23",
     settings: {
       optimizer: {
         enabled: true,
