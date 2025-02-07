@@ -1,8 +1,11 @@
 const hre = require("hardhat");
 
+// to run the script:
+//      npx hardhat run scripts/verify/my-contract.js --network zkSyncSepoliaTestnet
+
 async function main() {
-  const contractAddress = "<YOUR CONTRACT ADDRESS>";
-  const constructorArgs = [];
+  const contractAddress = "<YOUR CONTRACT ADDRESS>"; // TODO: contract address
+  const constructorArgs = []; // TODO: add constructor params here, if any
 
   console.log("Verifying contract.");
   await verify(
